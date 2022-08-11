@@ -1,0 +1,49 @@
+#forgot-password {
+  min-width: 50%;
+}
+
+#forgot-password .login-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#forgot-password .login-header .login-header_h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #141414;
+}
+
+#forgot-password .login-header .login-header_title {
+  margin-top: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  color: #8c8c8c;
+  font-size: 20px;
+  white-space: normal;
+}
+
+#forgot-password .form-input {
+  border-radius: 0.6rem;
+  padding: 0.4rem 1.1rem;
+  height: 4rem;
+  transition: all 0.3s;
+}
+
+#forgot-password .login-form-button {
+  width: 10rem;
+  border-radius: 0.6rem;
+  height: 4rem;
+  padding: 0 1.4rem;
+}
+
+#forgot-password .forgot-password_button {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 2rem;
+}
+
+#forgot-password .font {
+  color: rgba(0, 0, 0, 0.836);
+  margin-left: 0.5rem;
+}
