@@ -40,10 +40,6 @@ export const adminRouter = [
     component: PG,
     children: [
       {
-        path: 'create-pg',
-        component: CreatePG,
-      },
-      {
         index: true,
         path: 'list-pg',
         component: ListPG,

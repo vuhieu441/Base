@@ -1,0 +1,57 @@
+#create-pg .createPG {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  animation: add 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#create-pg .close {
+  animation: closeAdd 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#create-pg .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-top: 30px;
+}
+
+#create-pg .input {
+  height: 4rem;
+  border-radius: 0.6rem;
+}
+
+#create-pg .button {
+  display: flex;
+  justify-content: end;
+  column-gap: 3rem;
+}
+
+#create-pg .close-button,
+#create-pg .add-button {
+  width: 10rem;
+  border-radius: 0.6rem;
+}
+
+@keyframes closeAdd {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(520px);
+  }
+}
+
+@keyframes add {
+  0% {
+    transform: translateX(450px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
