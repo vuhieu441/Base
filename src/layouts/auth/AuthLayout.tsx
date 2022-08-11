@@ -1,5 +1,8 @@
 import { useEffect } from 'react';
 import { Navigate, Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { useAppSelector } from 'src/app/hooks';
+import Loading from 'src/components/specific/loading/Loading';
+import { selectLoadingLogin } from 'src/feature/auth/loginSlice';
 
 import './Styled.scss';
 
@@ -7,6 +10,9 @@ const AuthLayout = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const token = localStorage.getItem('token');
+
+  const loadingLogin = useAppSelector(selectLoadingLogin);
+
   useEffect(() => {
     if (location.pathname === '/auth') return navigate('/auth/login');
   }, []);
@@ -26,6 +32,7 @@ const AuthLayout = () => {
           <img src='https://www.kindpng.com/picc/m/83-837962_white-ferrari-car-png-image-car-images-hd.png' alt='img' />
         </div>
       </div>
+      {loadingLogin && <Loading />}
     </>
   );
 };

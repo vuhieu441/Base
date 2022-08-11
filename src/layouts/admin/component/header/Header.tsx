@@ -8,7 +8,7 @@ import { languageCode, languageDropdownData } from 'src/utils/constants';
 import './Styled.scss';
 
 const Header = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   const currentLanguageCode = Cookies.get('i18next') || 'vi';
   const currentLanguage = languageDropdownData.find((language) => language.code === currentLanguageCode);

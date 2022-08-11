@@ -1,11 +1,9 @@
 import { Navigate } from 'react-router-dom';
 
 const Landing = () => {
-  return (
-    <>
-      <Navigate to='auth' />
-    </>
-  );
+  const token = localStorage.getItem('token');
+
+  return token ? <Navigate to='/admin/dashboard' /> : <h1>Landing page</h1>;
 };
 
 export default Landing;

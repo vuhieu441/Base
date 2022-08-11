@@ -3,11 +3,12 @@ import { Route, Routes } from 'react-router-dom';
 
 import Landing from './layouts/landing/LandingLayout';
 import AuthLayout from './layouts/auth/AuthLayout';
-import PageNotFound from './components/specific/pageNotFound/PageNotFound';
-import { adminRouter, authRouter } from './utils/router';
 import AdminLayout from './layouts/admin/AdminLayout';
+import PageNotFound from './components/specific/pageNotFound/PageNotFound';
 import ProtectedRouter from './components/specific/protectedRouter/ProtectedRouter';
-import Loading from './components/specific/loading/Loading';
+
+import { adminRouter, authRouter } from './utils/router';
+import Modal from './components/specific/modal/Modal';
 
 function App() {
   return (
@@ -45,8 +46,8 @@ function App() {
           </Route>
           <Route path='*' element={<PageNotFound />} />
         </Routes>
+        <Modal />
       </div>
-      <Loading />
     </>
   );
 }
