@@ -1,6 +1,6 @@
 import { RootState } from '../../app/store';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import authApi from '../../api/auth';
+import authApi from '../../apis/auth';
 
 export const login = createAsyncThunk('login', async (data: any) => {
   const res = await authApi.login(data);
@@ -22,13 +22,13 @@ const LoginSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(login.pending, (state, action) => {
+    builder.addCase(login.pending, (state) => {
       state.loading = true;
     });
-    builder.addCase(login.fulfilled, (state, action) => {
+    builder.addCase(login.fulfilled, (state) => {
       state.loading = false;
     });
-    builder.addCase(login.rejected, (state, action) => {
+    builder.addCase(login.rejected, (state) => {
       state.loading = false;
     });
   },

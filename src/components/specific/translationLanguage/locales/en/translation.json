@@ -3,5 +3,9 @@
   "dashboardPage": "Dashboard Page",
   "pg": "PG",
   "listPg": "List Pg",
-  "logOut": "Log Out"
+  "logOut": "Log Out",
+  "add": "Add",
+  "key": "Hello <1>{{name}}</1>",
+  "nameTitle": "This is your name",
+  "userMessagesUnread": "Hello <strong>{{name}}</strong>, you have {{count}} "
 }

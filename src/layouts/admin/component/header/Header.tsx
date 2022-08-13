@@ -3,7 +3,7 @@ import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Menu, Space, Typography } from 'antd';
 import { useTranslation } from 'react-i18next';
 
-import { languageCode, languageDropdownData } from 'src/utils/constants';
+import { LANGUAGE_CODE, LANGUAGE_DROPDOWN_DATA } from 'src/utils/constants';
 
 import './Styled.scss';
 
@@ -11,14 +11,14 @@ const Header = () => {
   const { i18n } = useTranslation();
 
   const currentLanguageCode = Cookies.get('i18next') || 'vi';
-  const currentLanguage = languageDropdownData.find((language) => language.code === currentLanguageCode);
+  const currentLanguage = LANGUAGE_DROPDOWN_DATA.find((language) => language.code === currentLanguageCode);
 
   const menu = (
     <Menu
       selectable
       defaultSelectedKeys={['3']}
       onClick={(e) => {
-        i18n.changeLanguage(languageCode[parseInt(e.key)]);
+        i18n.changeLanguage(LANGUAGE_CODE[parseInt(e.key)]);
       }}
       items={[
         {
