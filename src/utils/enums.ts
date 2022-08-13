@@ -1,3 +1,3 @@
-export const ModalComponentName = {
-  ADD_PG: 'ADD_PG',
-};
+export enum ModalComponentName {
+  ADD_PG = 'ADD_PG',
+}

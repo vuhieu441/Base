@@ -1,7 +1,3 @@
-import { useAppSelector } from 'src/app/hooks';
-
-import { selectLoadingLogin } from 'src/feature/auth/loginSlice';
-
 import './Styled.scss';
 
 const Loading = () => {

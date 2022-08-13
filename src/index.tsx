@@ -8,9 +8,9 @@ import i18n from './i18next';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { store } from './app/store';
+import GlobalStyles from './components/specific/globalStyles/GlobalStyles';
 
 import 'antd/dist/antd.css';
-import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -18,7 +18,9 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <I18nextProvider i18n={i18n}>
-          <App />
+          <GlobalStyles>
+            <App />
+          </GlobalStyles>
         </I18nextProvider>
       </BrowserRouter>
     </Provider>

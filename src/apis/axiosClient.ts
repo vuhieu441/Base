@@ -1,13 +1,13 @@
-import axios from "axios";
-import { baseURL } from "../utils/constants";
+import axios from 'axios';
+import { BASEURL } from 'src/utils/constants';
 
 const axiosClient = axios.create({
-    baseURL: baseURL,
-    headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-    }
-})
+  baseURL: BASEURL,
+  headers: {
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+  },
+});
 
 // // Add a request interceptor
 // axiosClient.interceptors.request.use(

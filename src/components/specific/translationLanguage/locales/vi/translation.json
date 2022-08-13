@@ -3,5 +3,7 @@
   "dashboardPage": "Trang bảng điều khiển",
   "pg": "PG",
   "listPg": "Danh sách Pg",
-  "logOut": "Đăng xuất"
+  "logOut": "Đăng xuất",
+  "add": "Thêm",
+  "userMessagesUnread": "Xin chào {{name}}, bạn đã {{count}} ."
 }

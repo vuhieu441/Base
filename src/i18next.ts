@@ -6,7 +6,7 @@ import { initReactI18next } from 'react-i18next';
 import translationVN from 'src/components/specific/translationLanguage/locales/vi/translation.json';
 import translationEN from 'src/components/specific/translationLanguage/locales/en/translation.json';
 
-import { languageCode } from './utils/constants';
+import { LANGUAGE_CODE } from './utils/constants';
 
 //The translation
 const resources = {
@@ -29,8 +29,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    supportedLngs: languageCode,
-    fallbackLng: languageCode[0],
+    supportedLngs: LANGUAGE_CODE,
+    fallbackLng: LANGUAGE_CODE[0],
     detection: {
       order: ['path', 'cookie', 'htmlTag'],
       caches: ['cookie'],
