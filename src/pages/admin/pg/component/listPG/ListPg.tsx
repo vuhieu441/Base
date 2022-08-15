@@ -2,7 +2,7 @@ import { DeleteFilled, EditFilled, ExclamationCircleOutlined, PlusOutlined } fro
 import { Avatar, Button, List, Modal } from 'antd';
 import confirm from 'antd/lib/modal/confirm';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { useAppDispatch, useAppSelector } from 'src/app/hooks';
@@ -99,10 +99,10 @@ const ListPG = () => {
       <div id='list-pg'>
         <div className='title'>
           <h2>
-            {t('listPg')}: {listData.length}
+            {t('admin.pg.listPg')}: {listData.length}
           </h2>
           <Button type='primary' className='button_add' onClick={showAdd}>
-            ADD
+            {t('admin.pg.add')}
             <PlusOutlined />
           </Button>
         </div>

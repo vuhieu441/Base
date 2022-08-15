@@ -30,7 +30,7 @@ const SideBar = () => {
           {sideBarRouter.map((item, idx) => {
             return (
               <NavLink className='menu-li' key={idx} to={`${item.path}`}>
-                <li>{t(item.label)}</li>
+                <li>{t(`admin.sideBar.${item.label}`)}</li>
               </NavLink>
             );
           })}
@@ -38,7 +38,7 @@ const SideBar = () => {
         <div className='side-bar_logout'>
           <Button className='login-form-button' type='text' onClick={logOut}>
             <LogoutOutlined />
-            {t('logOut')}
+            {t('admin.auth.logOut')}
           </Button>
         </div>
       </div>

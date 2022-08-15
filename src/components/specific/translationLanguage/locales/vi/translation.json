@@ -1,9 +1,25 @@
 {
-  "dashboard": "Bảng điều khiển",
-  "dashboardPage": "Trang bảng điều khiển",
-  "pg": "PG",
-  "listPg": "Danh sách Pg",
-  "logOut": "Đăng xuất",
-  "add": "Thêm",
-  "userMessagesUnread": "Xin chào {{name}}, bạn đã {{count}} ."
+  "admin": {
+    "sideBar": {
+      "dashboard": "Bảng điều khiển",
+      "pg": "PG"
+    },
+    "dashboard": {
+      "dashboard": "Bảng điều khiển",
+      "dashboardPage": "Trang điều khiển",
+      "userMessagesUnread": "Xin chào <strong>{{name}}</strong>, bạn đã {{count}} tuổi "
+    },
+    "pg": {
+      "pg": "PG",
+      "listPg": "Danh sách Pg",
+      "add": "Thêm",
+      "close": "Thoát",
+      "edit": "Chỉnh sửa",
+      "save": "Lưu",
+      "title": "Tiêu đề"
+    },
+    "auth": {
+      "logOut": "Đăng xuất"
+    }
+  }
 }

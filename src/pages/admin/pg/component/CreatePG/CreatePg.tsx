@@ -79,20 +79,20 @@ const CreatePG = () => {
         {dataState === undefined && (
           <div className={`createPG ${animationClose}`}>
             <div className='title'>
-              <h1>{t('add')}</h1>
+              <h1>{t('admin.pg.add')}</h1>
             </div>
             <div className='content'>
               <Form onFinish={onFinish}>
                 <Form.Item name='title'>
-                  <Input className='input' placeholder='Title' />
+                  <Input className='input' placeholder={t('admin.pg.title')} />
                 </Form.Item>
                 <Form.Item>
                   <div className='button'>
                     <Button className='close-button' onClick={handleCloseModal}>
-                      Close
+                      {t('admin.pg.close')}
                     </Button>
                     <Button className='add-button' type='primary' htmlType='submit'>
-                      Add
+                      {t('admin.pg.add')}
                     </Button>
                   </div>
                 </Form.Item>
@@ -103,7 +103,7 @@ const CreatePG = () => {
         {dataState && (
           <div className={`createPG ${animationClose}`}>
             <div className='title'>
-              <h1>Edit</h1>
+              <h1>{t('admin.pg.edit')}</h1>
             </div>
             <div className='content'>
               <Form
@@ -113,15 +113,15 @@ const CreatePG = () => {
                 }}
               >
                 <Form.Item name='title'>
-                  <Input className='input' placeholder='Title' />
+                  <Input className='input' placeholder={t('admin.pg.title')} />
                 </Form.Item>
                 <Form.Item>
                   <div className='button'>
                     <Button className='close-button' onClick={handleCloseModal}>
-                      Close
+                      {t('admin.pg.close')}
                     </Button>
                     <Button className='add-button' type='primary' htmlType='submit'>
-                      Add
+                      {t('admin.pg.save')}
                     </Button>
                   </div>
                 </Form.Item>
