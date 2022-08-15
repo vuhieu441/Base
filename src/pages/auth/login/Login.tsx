@@ -21,14 +21,16 @@ const Login = () => {
           message: `Đăng nhập thành công`,
           description: 'Bạn đang ở trang dashboard',
           placement: 'bottomLeft',
+          duration: 1,
         });
         navigate('/admin/dashboard');
       })
-      .catch(() => {
+      .catch((error) => {
         notification['error']({
-          message: `Tài khoản hoặc mật khẩu sai`,
+          message: `${error.message}`,
           description: 'Nhập lại tài khoản, mật khẩu đi bạn ơi !!!',
           placement: 'bottomLeft',
+          duration: 1,
         });
       });
   };

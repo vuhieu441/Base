@@ -10,7 +10,7 @@ const DashboardContent = () => {
     <>
       <div id='dashboard-content'>
         <div className='title'>
-          <Translation>{(t) => <h2>{t('dashboardPage')}</h2>}</Translation>
+          <Translation>{(t) => <h2>{t('admin.dashboard.dashboardPage')}</h2>}</Translation>
           {/* <Trans i18nKey='userMessagesUnread' count={30}>
             {{ name }}
           </Trans> */}
