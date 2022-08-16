@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 import Landing from './layouts/landing/LandingLayout';
 import AuthLayout from './layouts/auth/AuthLayout';
@@ -23,6 +23,7 @@ function App() {
           </Route>
           <Route path='admin' element={<ProtectedRouter Component={AdminLayout} />}>
             {adminRouter.map((item, idx) => {
+              <Route key={idx} index element={<Navigate to={'dashboard'} />} />;
               const Page = item.component || '';
               return (
                 <Route path={item.path} key={idx} element={<Page />}>
@@ -30,13 +31,13 @@ function App() {
                     item.children.length > 0 &&
                     item.children.map((childRoute, index) => {
                       const ChildComponent = childRoute.component;
-                      return (
-                        <Route
-                          key={index}
-                          path={childRoute.path}
-                          index={childRoute.index ?? false}
-                          element={<ChildComponent />}
-                        />
+                      return childRoute.index ? (
+                        <Route>
+                          <Route key={index} index element={<Navigate to={childRoute.path} />} />
+                          <Route key={index} path={childRoute.path} element={<ChildComponent />} />
+                        </Route>
+                      ) : (
+                        <Route key={index} path={childRoute.path} element={<ChildComponent />} />
                       );
                     })}
                 </Route>
