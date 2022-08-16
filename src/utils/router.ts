@@ -1,7 +1,5 @@
 import Dashboard from 'src/pages/admin/dashboard/Dashboard';
-import DashboardContent from 'src/pages/admin/dashboard/component/dashboardContent/DashboardContent';
 import PG from 'src/pages/admin/pg/Pg';
-import CreatePG from 'src/pages/admin/pg/component/CreatePG/CreatePg';
 import ListPG from 'src/pages/admin/pg/component/listPG/ListPg';
 import Login from 'src/pages/auth/login/Login';
 import Register from 'src/pages/auth/register/Register';
@@ -25,15 +23,8 @@ export const authRouter = [
 
 export const adminRouter = [
   {
-    path: '',
+    path: 'dashboard',
     component: Dashboard,
-    children: [
-      {
-        index: true,
-        path: 'dashboard',
-        component: DashboardContent,
-      },
-    ],
   },
   {
     path: 'pg',
@@ -42,6 +33,10 @@ export const adminRouter = [
       {
         index: true,
         path: 'list-pg',
+        component: ListPG,
+      },
+      {
+        path: 'update-pg',
         component: ListPG,
       },
     ],
